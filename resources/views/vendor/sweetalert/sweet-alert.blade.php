@@ -1,0 +1,1 @@
+<script src="{{ asset('assets/js/delete-message-alert.js') }}"></script>

@@ -1,0 +1,45 @@
+@extends('template')
+@section('content')
+<div class="app-content pt-3 p-md-3 p-lg-4">
+	<div class="container-xl">
+		<div class="position-relative mb-3">
+			<div class="row g-3 justify-content-between">
+				<div class="col-auto">
+					<h1 class="app-page-title mb-0 font-dangrek-bold title-fonts" >ប្រភេទនៃព័ត៌មាន</h1>
+				</div>
+				<a href="{{ route('admin.category.create') }}" class="btn btn-primary btn-add-style font-Hanuman-bold">បន្ថែមទិន្នន័យ</a>
+			</div>
+		</div>
+		<div class="app-card app-card-notification shadow-sm mb-4" >
+			<div class="app-card-header px-4 py-3" style="padding: 20px">
+				<table class="table myTable">
+					<thead class="table caption-top">
+					  <td class="font-Hanuman-bold table-title-font" >ល.រ</td>
+					  <td class="font-Hanuman-bold table-title-font" >ចំណងជើងភាសាខ្មែរ</td>
+					  <td class="font-Hanuman-bold table-title-font" >ចំណងជើងអងគ្លេស</td>
+					  <td class="font-Hanuman-bold table-title-font" >កាលបរិច្ឆេទ</td>
+					  <td class="font-Hanuman-bold table-title-font" >សកម្មភាព</td>
+					</thead>
+					<tbody>
+					</tbody>
+				</table>
+		</div><!--//app-card-->
+<script type="text/javascript">
+	//Datatables
+	$(document).ready( function () {
+    	var table = $('.myTable').DataTable({
+			processing: true,
+			serverSide: true,
+			ajax : "{{ route('admin.category.newsDatatable') }}",
+			columns: [
+				{data: 'id', name: 'id'},
+				{data: 'title_cate_kh', name: 'title_cate_kh'},
+				{data: 'title_cate_eng', name: 'title_cate_eng'},
+				{data: 'created_at', name: 'created_at'},
+				{data: 'action', name: 'action', orderable: false, searchable: false},
+			]
+		})
+	});
+</script>
+@include('vendor.sweetalert.sweet-alert')
+@endsection

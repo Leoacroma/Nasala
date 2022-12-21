@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Moul&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hanuman:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dangrek&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+.font-Hanuman {
+    font-family: 'Hanuman', serif;
+}
+
+.font-Hanuman-bold {
+    font-family: 'Hanuman', serif;
+    font-weight: bold;
+}
+
+.font-dangrek-bold {
+    font-family: 'Dangrek', cursive;
+    font-weight: bold;
+}
+
+.font-dangrek {
+    font-family: 'Dangrek', cursive;
+}
+
+.font-Moul {
+    font-family: 'Moul', cursive;
+}
+
+.font-family-ENG {
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+}
